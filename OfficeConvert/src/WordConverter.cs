@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Word = Microsoft.Office.Interop.Word;
-using Microsoft.Office.Core;
 using System.IO;
 
 namespace OfficeConvert
 {
-    
+
     public class WordConverter : Converter
     {
         private Word.Application app;
@@ -53,7 +48,7 @@ namespace OfficeConvert
                     doc.Close(false);
                     releaseCOMObject(doc);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                 }
@@ -66,7 +61,7 @@ namespace OfficeConvert
                     docs.Close(false);
                     releaseCOMObject(docs);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                 }
@@ -79,7 +74,7 @@ namespace OfficeConvert
                     app.Quit();
                     releaseCOMObject(app);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                 }

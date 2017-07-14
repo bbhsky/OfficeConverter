@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.IO;
-using System.Threading.Tasks;
 using Excel = Microsoft.Office.Interop.Excel;
-using Microsoft.Office.Core;
 
 namespace OfficeConvert
 {
@@ -68,7 +63,7 @@ namespace OfficeConvert
                     book.Close(false);
                     releaseCOMObject(book);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                 }
@@ -81,7 +76,7 @@ namespace OfficeConvert
                     books.Close();
                     releaseCOMObject(books);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                 }
@@ -94,7 +89,7 @@ namespace OfficeConvert
                     app.Quit();
                     releaseCOMObject(app);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                 }

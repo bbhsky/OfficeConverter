@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using Microsoft.Office.Core;
 using System.IO;
@@ -53,7 +49,7 @@ namespace OfficeConvert
                     presentation.Close();
                     releaseCOMObject(presentation);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                 }
@@ -66,7 +62,7 @@ namespace OfficeConvert
                     app.Quit();
                     releaseCOMObject(app);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
 
                 }
